@@ -2,7 +2,7 @@
 
 $fruits = include "./products.php";
 
-function print_items($fruits, $level = 1) {
+function print_items(array $fruits, int $level = 1): void {
     foreach($fruits as $key => $package) {
         echo str_repeat(".", $level);
         echo $key;

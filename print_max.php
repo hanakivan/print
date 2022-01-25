@@ -2,7 +2,7 @@
 
 $fruits = include "./products.php";
 
-function print_max($fruits, $more = []) {
+function print_max(array $fruits, array $more = []): void {
     foreach($fruits as $key => $package) {
         if(is_array($package)) {
             print_max($package, array_merge($more, [$key]));
